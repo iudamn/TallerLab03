@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Menu {
+    Flete f1= new Flete();
     // agregar y quitar productos (add & remove) a un embarque, que permita cambiar el estado del camión,
     // agregar nuevos camiones a la flota y desvincular camiones de la flota.
 
@@ -27,6 +28,7 @@ public class Menu {
                 exit();
                 break;
             case 1:
+                f1.agregarPack();
                 break;
             case 2:
                 break;
@@ -49,13 +51,13 @@ public class Menu {
         }
     }
 
-    public static String getInput (String message){
+    public String getInput (String message){
         Scanner scanner = new Scanner(System.in);
         System.out.println(message);
         return scanner.next();
     }
 
-    public static int validateInput(String validacion,int a, int b){
+    public int validateInput(String validacion,int a, int b){
         while (true) {
             String input = getInput("Seleccione una opción:");
             if (validacion.indexOf(input) >= 0) {

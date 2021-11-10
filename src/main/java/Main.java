@@ -15,6 +15,7 @@ public class Main {
         System.out.println(empresa1._sucursal.get(0)._camion.get(0).calcularValorTotal());
         empresa1._sucursal.get(0)._camion.get(0).cambiarEstado();
         Menu menu1= new Menu();
+        Flete flete1= new Flete();
         menu1.menu();
     }
 }
