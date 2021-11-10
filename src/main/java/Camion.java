@@ -8,25 +8,35 @@ public class Camion {
 	public Sucursal _sucursal;
 	public ArrayList<Flete> _fletes = new ArrayList<Flete>();
 
-	public Camion(int codigoCamion, int patente, String descripcion, boolean estado, Sucursal _sucursal, ArrayList<Flete> _fletes) {
+	public Camion(int codigoCamion, int patente, String descripcion, boolean estado, Sucursal sucursal) {
 		this.codigoCamion = codigoCamion;
 		this.patente = patente;
 		this.descripcion = descripcion;
 		this.estado = estado;
-		this._sucursal = _sucursal;
-		this._fletes = _fletes;
+		this._sucursal=sucursal;
+	}
+
+	public void agregarFlete(int codigoFlete, String descripcionflete) {
+		Flete flete = new Flete(codigoFlete,descripcionflete);
+		this._fletes.add(flete);
 	}
 
 	public void cambiarEstado() {
 		this.estado = !this.estado;
+		System.out.println(isEstado());
 	}
 
-	public void calcularValorTotal() {
+	public double calcularValorTotal() {
 		double valor = 0;
 		for(Flete fletes : this._fletes){
 			for(Producto productos : fletes.pack){
-				valor = valor+5000;
+				valor = valor+500;
 			}
 		}
+		return valor;
+	}
+
+	public boolean isEstado() {
+		return estado;
 	}
 }
