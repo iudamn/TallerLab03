@@ -16,4 +16,9 @@ public class Sucursal {
 		Camion camion = new Camion(codigoCamion,patente,descripcion,estado,this,fletes);
 		this._camion.add(camion);
 	}
+	public void desvincularCamion(){
+		if(this._camion.size() > 1) {
+			this._camion.remove(this._camion.get(0));
+		}
+	}
 }

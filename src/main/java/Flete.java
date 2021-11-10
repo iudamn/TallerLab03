@@ -6,10 +6,15 @@ public class Flete {
 	public ArrayList<Producto> pack = new ArrayList<Producto>();
 
 	public void agregarPack() {
-		throw new UnsupportedOperationException();
+		if (this.pack.size() < 5) {
+			Producto producto = new Producto();
+			this.pack.add(producto);
+		}
 	}
 
 	public void quitarPack() {
-		throw new UnsupportedOperationException();
+		if (this.pack.size() > 1) {
+			this.pack.remove(this.pack.get(0));
+		}
 	}
 }

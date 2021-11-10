@@ -9,6 +9,4 @@ public class Empresa {
 		Sucursal sucursal = new Sucursal(codigo,region,this);
 		this._sucursal.add(sucursal);
 	}
-
-
 }
