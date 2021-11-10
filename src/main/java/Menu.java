@@ -3,11 +3,6 @@ import java.util.Scanner;
 
 public class Menu {
     Flete f1= new Flete();
-    // agregar y quitar productos (add & remove) a un embarque, que permita cambiar el estado del camión,
-    // agregar nuevos camiones a la flota y desvincular camiones de la flota.
-
-    // calcular el valor total de un embarque para un camión, en un momento determinado,
-    // considerando que por cada producto transportado se cobra $5000 independiente de su tamaño o peso.
 
     public void menu () throws IOException {
         System.out.println("¿Qué desea hacer?");
@@ -31,6 +26,7 @@ public class Menu {
                 f1.agregarPack();
                 break;
             case 2:
+                f1.quitarPack();
                 break;
             case 3:
                 break;
@@ -41,13 +37,13 @@ public class Menu {
         }
     }
 
-    public void exit () {
+    public void exit () throws IOException {
         String respuesta = getInput("Desea salir del programa? S/N");
         respuesta = respuesta.toLowerCase();
         if (respuesta.contains("s")) {
             System.exit(0);
         } else if (respuesta.contains("n")) {
-            System.out.println("");
+            menu();
         }
     }
 
