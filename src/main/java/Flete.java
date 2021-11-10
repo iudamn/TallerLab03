@@ -5,6 +5,15 @@ public class Flete {
 	private String descripcionFlete;
 	public ArrayList<Producto> pack = new ArrayList<Producto>();
 
+	public Flete(int codigoFlete, String descripcionFlete) {
+		this.codigoFlete = codigoFlete;
+		this.descripcionFlete = descripcionFlete;
+	}
+
+	public Flete() {
+
+	}
+
 	public void agregarPack() {
 		if (this.pack.size() < 5) {
 			Producto producto = new Producto();

@@ -24,6 +24,7 @@ public class Menu {
                 break;
             case 1:
                 f1.agregarPack();
+                System.out.println(f1.pack.toString());
                 break;
             case 2:
                 f1.quitarPack();

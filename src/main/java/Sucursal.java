@@ -12,12 +12,12 @@ public class Sucursal {
 		this._empresa = _empresa;
 	}
 	public void agregarCamion(int codigoCamion,int patente, String descripcion,
-							  boolean estado, ArrayList<Flete> fletes) {
-		Camion camion = new Camion(codigoCamion,patente,descripcion,estado,this,fletes);
+							  boolean estado) {
+		Camion camion = new Camion(codigoCamion,patente,descripcion,estado,this);
 		this._camion.add(camion);
 	}
 	public void desvincularCamion(){
-		if(this._camion.size() > 1) {
+		if(this._camion.size() > 0) {
 			this._camion.remove(this._camion.get(0));
 		}
 	}
