@@ -5,8 +5,8 @@ public class Empresa {
 	private String direccion;
 	public ArrayList<Sucursal> _sucursal = new ArrayList<Sucursal>();
 
-	public void agregarSucursal(int codigo, String region, ArrayList<Camion> camiones) {
-		Sucursal sucursal = new Sucursal(codigo,region,this,camiones);
+	public void agregarSucursal(int codigo, String region) {
+		Sucursal sucursal = new Sucursal(codigo,region,this);
 		this._sucursal.add(sucursal);
 	}
 
