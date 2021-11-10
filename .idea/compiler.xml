@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Taller3" />
+        <module name="TallerLab03" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="TallerLab03" target="16" />
+    </bytecodeTargetLevel>
   </component>
 </project>
