@@ -2,13 +2,8 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Menu {
-    // agregar y quitar productos (add & remove) a un embarque, que permita cambiar el estado del camión,
-    // agregar nuevos camiones a la flota y desvincular camiones de la flota.
-    // calcular el valor total de un embarque para un camión, en un momento determinado,
-    // considerando que por cada producto transportado se cobra $5000 independiente de su tamaño o peso.
 
-
-    public void menu () {
+    public void menu () throws IOException {
         System.out.println("¿Qué desea hacer?");
         System.out.println("[0] Salir (S/N)");
         System.out.println("[1] Agregar productos a un embarque");
@@ -16,6 +11,9 @@ public class Menu {
         System.out.println("[3] Cambiar estado del camión");
         System.out.println("[4] Agregar nuevos camiones a la flota");
         System.out.println("[5] Desvincular camiones a la flota");
+        int opcion = 0;
+        opcion = validateInput("012345", -1, 6);
+        menuSwitch(opcion);
     }
 
     public void menuSwitch ( int opcion) throws IOException {
