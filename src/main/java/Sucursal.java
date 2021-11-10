@@ -17,7 +17,7 @@ public class Sucursal {
 		this._camion.add(camion);
 	}
 	public void desvincularCamion(){
-		if(this._camion.size() > 1) {
+		if(this._camion.size() > 0) {
 			this._camion.remove(this._camion.get(0));
 		}
 	}

@@ -10,6 +10,10 @@ public class Flete {
 		this.descripcionFlete = descripcionFlete;
 	}
 
+	public Flete() {
+
+	}
+
 	public void agregarPack() {
 		if (this.pack.size() < 5) {
 			Producto producto = new Producto();

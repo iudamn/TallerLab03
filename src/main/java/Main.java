@@ -10,10 +10,19 @@ public class Main {
         empresa1._sucursal.get(0).agregarCamion(123,123,"descripcioncamion",false);
         //al camión se le agrego un flete
         empresa1._sucursal.get(0)._camion.get(0).agregarFlete(123,"descripcionflete");
-        //al flete se le agrego un pack
+        //al flete se le agregaron 2 packs de productos
         empresa1._sucursal.get(0)._camion.get(0)._fletes.get(0).agregarPack();
+        empresa1._sucursal.get(0)._camion.get(0)._fletes.get(0).agregarPack();
+        //sout con el valor total tras haber agregado el pack
         System.out.println(empresa1._sucursal.get(0)._camion.get(0).calcularValorTotal());
         empresa1._sucursal.get(0)._camion.get(0).cambiarEstado();
+        //se quitó el pack agregado
+        empresa1._sucursal.get(0)._camion.get(0)._fletes.get(0).quitarPack();
+        //se comprobo que el precio cambió
+        System.out.println(empresa1._sucursal.get(0)._camion.get(0).calcularValorTotal());
+        //se desvinculó el camion de la sucursal
+        empresa1._sucursal.get(0).desvincularCamion();
+
         Menu menu1= new Menu();
         Flete flete1= new Flete();
         menu1.menu();

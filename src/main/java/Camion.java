@@ -23,14 +23,13 @@ public class Camion {
 
 	public void cambiarEstado() {
 		this.estado = !this.estado;
-		System.out.println(isEstado());
 	}
 
 	public double calcularValorTotal() {
 		double valor = 0;
 		for(Flete fletes : this._fletes){
 			for(Producto productos : fletes.pack){
-				valor = valor+500;
+				valor = valor+5000;
 			}
 		}
 		return valor;
