@@ -18,10 +18,15 @@ public class Camion {
 	}
 
 	public void cambiarEstado() {
-		throw new UnsupportedOperationException();
+		this.estado = !this.estado;
 	}
 
 	public void calcularValorTotal() {
-		throw new UnsupportedOperationException();
+		double valor = 0;
+		for(Flete fletes : this._fletes){
+			for(Producto productos : fletes.pack){
+				valor = valor+5000;
+			}
+		}
 	}
 }
